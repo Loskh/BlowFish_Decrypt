@@ -18,7 +18,7 @@ const unsigned int CBlowFish::scm_auiInitP[18] = {
 	0xc0ac29b7, 0xc97c50dd, 0x3f84d5b5, 0xb5470917,
 	0x9216d5d9, 0x8979fb1b
 };
-//test
+//test 2018.6.19
 //Four 32-bit S-boxes with 256 entries each
 const unsigned int CBlowFish::scm_auiInitS[4][256] = {
 	//0
