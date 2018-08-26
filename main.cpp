@@ -9,7 +9,7 @@
 #include "BlowFish.h"
 
 using namespace std;
-unsigned char bundleVer[]= {"3a23217d6669163c3bd1cc1119550f1a0261e8243e1da118090e230daab1f2fce4e3fe3d742f33edfbda82141d584906c554d61512140815df0db2"};
+unsigned char bundleVer[]= {"****************************************************************"};
 void BlowFishDecrypt(unsigned char *szDataIn,unsigned char *szDataOut, int len) {
     CBlowFish oBlowFish((unsigned char*)bundleVer, 118);
     oBlowFish.ResetChain();
@@ -80,8 +80,8 @@ int DecryptFile(char *filename) {
         throw std::logic_error("Write File Error.\n");
     fwrite(szDataOut,1,len,pFile);
     fclose(pFile);
-//    free(szDataOut);
-//    free(buf);
+    free(szDataOut);
+    free(buf);
     return 0;
 }
 int main(int argc, char *argv[]) {
